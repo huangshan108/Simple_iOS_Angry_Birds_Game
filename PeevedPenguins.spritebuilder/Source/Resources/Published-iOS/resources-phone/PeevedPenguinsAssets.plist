@@ -4,6 +4,19 @@
 <dict>
 	<key>frames</key>
 	<dict>
+		<key>PeevedPenguinsAssets/angry-bird-icon.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{387, 450}, {256, 252}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 2}, {256, 252}}</string>
+			<key>sourceSize</key>
+			<string>{256, 256}</string>
+		</dict>
 		<key>PeevedPenguinsAssets/background.png</key>
 		<dict>
 			<key>frame</key>
@@ -20,7 +33,7 @@
 		<key>PeevedPenguinsAssets/bear.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{387, 836}, {80, 78}}</string>
+			<string>{{387, 925}, {80, 78}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -46,7 +59,7 @@
 		<key>PeevedPenguinsAssets/bearnoarms.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{387, 918}, {80, 78}}</string>
+			<string>{{467, 925}, {80, 78}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -59,7 +72,7 @@
 		<key>PeevedPenguinsAssets/button.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{387, 667}, {167, 152}}</string>
+			<string>{{468, 708}, {167, 152}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -72,7 +85,7 @@
 		<key>PeevedPenguinsAssets/catapult.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{387, 450}, {215, 79}}</string>
+			<string>{{387, 708}, {215, 79}}</string>
 			<key>offset</key>
 			<string>{0, -6}</string>
 			<key>rotated</key>
@@ -98,7 +111,7 @@
 		<key>PeevedPenguinsAssets/flyingpenguin.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{963, 300}, {25, 25}}</string>
+			<string>{{997, 271}, {25, 25}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -147,14 +160,53 @@
 			<key>sourceSize</key>
 			<string>{568, 384}</string>
 		</dict>
-		<key>PeevedPenguinsAssets/seal.png</key>
+		<key>PeevedPenguinsAssets/rsz_1angry-bird-icon.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{963, 273}, {27, 25}}</string>
+			<string>{{963, 242}, {32, 32}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {32, 32}}</string>
+			<key>sourceSize</key>
+			<string>{32, 32}</string>
+		</dict>
+		<key>PeevedPenguinsAssets/rsz_1rsz_1pig.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1012, 1}, {10, 9}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {10, 9}}</string>
+			<key>sourceSize</key>
+			<string>{10, 10}</string>
+		</dict>
+		<key>PeevedPenguinsAssets/rsz_big.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{963, 276}, {31, 31}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {31, 31}}</string>
+			<key>sourceSize</key>
+			<string>{37, 37}</string>
+		</dict>
+		<key>PeevedPenguinsAssets/seal.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{997, 242}, {27, 25}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
 			<key>sourceColorRect</key>
 			<string>{{0, 0}, {27, 25}}</string>
 			<key>sourceSize</key>
@@ -163,7 +215,7 @@
 		<key>PeevedPenguinsAssets/squareblock.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{963, 327}, {24, 24}}</string>
+			<string>{{963, 340}, {24, 24}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -189,7 +241,7 @@
 		<key>PeevedPenguinsAssets/taperedblock.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{994, 242}, {113, 27}}</string>
+			<string>{{996, 298}, {113, 27}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -202,7 +254,7 @@
 		<key>PeevedPenguinsAssets/waitingpenguin.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{963, 242}, {29, 29}}</string>
+			<string>{{963, 309}, {29, 29}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>

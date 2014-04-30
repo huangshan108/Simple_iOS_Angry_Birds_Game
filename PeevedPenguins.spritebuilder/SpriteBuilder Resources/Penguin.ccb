@@ -39,9 +39,9 @@
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>cornerRadius</key>
-			<real>13</real>
+			<real>0.0</real>
 			<key>density</key>
 			<real>25</real>
 			<key>dynamic</key>
@@ -53,8 +53,44 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>12.5</real>
-					<real>12.5</real>
+					<real>0.18537378311157227</real>
+					<real>15.534863471984863</real>
+				</array>
+				<array>
+					<real>3.6738941669464111</real>
+					<real>9.0229587554931641</real>
+				</array>
+				<array>
+					<real>7.8601188659667969</real>
+					<real>2.2784860134124756</real>
+				</array>
+				<array>
+					<real>17.860544204711914</real>
+					<real>-0.51233029365539551</real>
+				</array>
+				<array>
+					<real>27.628400802612305</real>
+					<real>1.8133499622344971</real>
+				</array>
+				<array>
+					<real>32.279762268066406</real>
+					<real>6.6972784996032715</real>
+				</array>
+				<array>
+					<real>32.279762268066406</real>
+					<real>17.162839889526367</real>
+				</array>
+				<array>
+					<real>25.070154190063477</real>
+					<real>25.30272102355957</real>
+				</array>
+				<array>
+					<real>15.534863471984863</real>
+					<real>31.814626693725586</real>
+				</array>
+				<array>
+					<real>9.0229587554931641</real>
+					<real>27.163265228271484</real>
 				</array>
 			</array>
 		</dict>
@@ -114,7 +150,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>PeevedPenguinsAssets/flyingpenguin.png</string>
+					<string>PeevedPenguinsAssets/rsz_1angry-bird-icon.png</string>
 				</array>
 			</dict>
 			<dict>

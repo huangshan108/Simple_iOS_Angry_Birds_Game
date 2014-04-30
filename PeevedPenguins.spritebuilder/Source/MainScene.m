@@ -11,7 +11,7 @@
 @implementation MainScene
 
 - (void)play {
-    CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
+    CCScene *gameplayScene = [CCBReader loadAsScene:@"ChooseLevels"];
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
 

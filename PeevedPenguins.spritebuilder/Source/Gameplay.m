@@ -8,8 +8,17 @@
 
 #import "Gameplay.h"
 #import "Penguin.h"
+#import "WaitingPenguin.h"
+#import "ChooseLevels.h"
+
+extern int level;
+int sealCount;
+int penguinsCount;
+bool flag;
 
 @implementation Gameplay {
+
+
     CCPhysicsNode *_physicsNode;
     
     CCNode *_catapultArm;
@@ -31,16 +40,103 @@
     
     CCAction *_followPenguin;
     
+    ChooseLevels *_chooseLevels;
+    
+    WaitingPenguin *_wPenguin;
+    
+    
+    
+    
+    CCNode *_winNode;
 }
 
-static const float MIN_SPEED = 5.f;
+static const float MIN_SPEED = 10.f;
+
+
+- (instancetype)init
+{
+    [[CCDirector sharedDirector] resume];
+    self = [super init];
+    if (self) {
+        //Set the score to zero.
+        penguinsCount = 3;
+        //Create and add the score label as a child.
+        scoreLabel = [CCLabelTTF labelWithString:@"Penguins Left: 3" fontName:@"Marker Felt" fontSize:24];
+        scoreLabel.position = ccp(470, 300);
+        CCColor* myColor = [CCColor colorWithRed: 0 green: 0 blue: 0];
+        scoreLabel.color = myColor;
+        [self addChild:scoreLabel z:1];
+        
+        
+        sealCount = 3;
+        penguinsCount = 3;
+        flag = TRUE;
+    }
+    return self;
+}
+
+
+- (void)subtractPenguins
+{
+    CCLOG(@"substract");
+    penguinsCount = penguinsCount - 1; //I think: score++; will also work.
+    [scoreLabel setString:[NSString stringWithFormat:@"Penguins Left: %d", penguinsCount]];
+}
 
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
+    sealCount = 3; // there are only 3 seals.
+    
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
-    CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
-    [_levelNode addChild:level];
+
+
+    // to load different levels
+    if (level == 1) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
+        [_levelNode addChild:level];
+        
+    }
+    
+    if (level == 2) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level2"];
+        [_levelNode addChild:level];
+    }
+    
+    if (level == 3) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level3"];
+        [_levelNode addChild:level];
+    }
+    
+    if (level == 4) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level4"];
+        [_levelNode addChild:level];
+    }
+    
+    if (level == 5) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level5"];
+        [_levelNode addChild:level];
+    }
+    
+    if (level == 6) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level6"];
+        [_levelNode addChild:level];
+    }
+    
+    if (level == 7) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level7"];
+        [_levelNode addChild:level];
+    }
+    
+    if (level == 8) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level8"];
+        [_levelNode addChild:level];
+    }
+    
+    if (level == 9) {
+        CCScene *level = [CCBReader loadAsScene:@"Levels/Level9"];
+        [_levelNode addChild:level];
+    }
     
     // visualize physics bodies & joints
     _physicsNode.debugDraw = FALSE  ;
@@ -119,6 +215,9 @@ static const float MIN_SPEED = 5.f;
         // follow the flying penguin
         _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
         [_contentNode runAction:_followPenguin];
+        
+//        CCLOG(@"Penguin Launched");
+        [self subtractPenguins];
     }
 }
 
@@ -135,6 +234,7 @@ static const float MIN_SPEED = 5.f;
 }
 
 - (void)launchPenguin {
+
     // loads the Penguin.ccb we have set up in Spritebuilder
     CCNode* penguin = [CCBReader load:@"Penguin"];
     // position the penguin at the bowl of the catapult
@@ -153,18 +253,33 @@ static const float MIN_SPEED = 5.f;
     self.position = ccp(0, 0);
     CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
     [_contentNode runAction:follow];
+    
+//    [_wPenguin removeSelf];
 }
 
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB
 {
     float energy = [pair totalKineticEnergy];
-
+    
     // if energy is large enough, remove the seal
     if (energy > 5000.f)
     {
         [self sealRemoved:nodeA];
+        if (flag) {
+            sealCount--;
+            flag = FALSE;
+        }
+        
+        double delayInSeconds = 0.01;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//            NSLog(@"Do some work");
+            flag = TRUE;
+        });
+
     }
+    
 }
 
 - (void)sealRemoved:(CCNode *)seal {
@@ -184,10 +299,12 @@ static const float MIN_SPEED = 5.f;
 
 - (void)update:(CCTime)delta
 {
-    
+
     if (_currentPenguin.launched) {
+    
         // if speed is below minimum speed, assume this attempt is over
         if (ccpLength(_currentPenguin.physicsBody.velocity) < MIN_SPEED){
+            
             [self nextAttempt];
             return;
         }
@@ -209,9 +326,25 @@ static const float MIN_SPEED = 5.f;
 }
 
 - (void)nextAttempt {
+    
+    if (sealCount <= 0) {
+//        [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"ChooseLevels"]];
+        [[CCDirector sharedDirector] pause];
+        CCScene *level = [CCBReader loadAsScene:@"youWin"];
+        [_winNode addChild:level];
+
+    }
+    
+    else if (penguinsCount <= 0) {
+        [[CCDirector sharedDirector] pause];
+        CCScene *level = [CCBReader loadAsScene:@"youLose"];
+        [_winNode addChild:level];
+    }
+    
+    
     _currentPenguin = nil;
     [_contentNode stopAction:_followPenguin];
-
+    
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
     [_contentNode runAction:actionMoveTo];
 }
@@ -219,5 +352,10 @@ static const float MIN_SPEED = 5.f;
 - (void)retry {
     // reload this level
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
+}
+
+- (void)back {
+    // to back to main menu
+    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"ChooseLevels"]];
 }
 @end

@@ -8,6 +8,12 @@
 
 #import "CCNode.h"
 
-@interface Gameplay : CCNode <CCPhysicsCollisionDelegate>
+@interface Gameplay : CCNode <CCPhysicsCollisionDelegate> {
+    int sealCount;
+    int penguinsCount;
+    CCLabelTTF *scoreLabel;
+}
+
+- (void)subtractPenguins;
 
 @end

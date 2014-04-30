@@ -43,7 +43,7 @@
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
-			<real>1</real>
+			<real>25</real>
 			<key>dynamic</key>
 			<true/>
 			<key>elasticity</key>
@@ -53,20 +53,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>2.0341832637786865</real>
+					<real>14.871938705444336</real>
 				</array>
 				<array>
-					<real>0.0</real>
-					<real>25</real>
+					<real>6.4994893074035645</real>
+					<real>7.3367342948913574</real>
 				</array>
 				<array>
-					<real>27</real>
-					<real>25</real>
+					<real>15.988265037536621</real>
+					<real>3.4295914173126221</real>
 				</array>
 				<array>
-					<real>27</real>
-					<real>0.0</real>
+					<real>29.663265228271484</real>
+					<real>4.8249998092651367</real>
+				</array>
+				<array>
+					<real>34.128570556640625</real>
+					<real>11.522958755493164</real>
+				</array>
+				<array>
+					<real>33.570407867431641</real>
+					<real>19.895408630371094</real>
+				</array>
+				<array>
+					<real>30.221427917480469</real>
+					<real>26.03520393371582</real>
+				</array>
+				<array>
+					<real>14.871938705444336</real>
+					<real>33.570407867431641</real>
+				</array>
+				<array>
+					<real>5.1040811538696289</real>
+					<real>27.430612564086914</real>
 				</array>
 			</array>
 		</dict>
@@ -126,7 +146,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>PeevedPenguinsAssets/seal.png</string>
+					<string>PeevedPenguinsAssets/rsz_big.png</string>
 				</array>
 			</dict>
 			<dict>

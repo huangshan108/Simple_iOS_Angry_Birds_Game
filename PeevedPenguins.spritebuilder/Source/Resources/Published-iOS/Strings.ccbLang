@@ -11,6 +11,14 @@
 	<key>fileVersion</key>
 	<integer>1</integer>
 	<key>translations</key>
-	<array/>
+	<array>
+		<dict>
+			<key>key</key>
+			<string>hahaha
+</string>
+			<key>translations</key>
+			<dict/>
+		</dict>
+	</array>
 </dict>
 </plist>
