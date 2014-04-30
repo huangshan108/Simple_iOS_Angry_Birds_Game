@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B475273D-3921-4F19-B23E-9C87D68CA8AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Simple_iOS_Angry_Birds_Game</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>21D8A64B-B648-4042-96ED-1E3449048FC9</key>
+		<string>https://github.com/huangshan108/Simple_iOS_Angry_Birds_Game.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PeevedPenguins.spritebuilder/Simple_iOS_Angry_Birds_Game.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>21D8A64B-B648-4042-96ED-1E3449048FC9</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/huangshan108/Simple_iOS_Angry_Birds_Game.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>21D8A64B-B648-4042-96ED-1E3449048FC9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>21D8A64B-B648-4042-96ED-1E3449048FC9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Simple_iOS_Angry_Birds_Game</string>
+		</dict>
+	</array>
+</dict>
+</plist>
