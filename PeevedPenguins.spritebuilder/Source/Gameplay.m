@@ -50,7 +50,7 @@ bool flag;
     CCNode *_winNode;
 }
 
-static const float MIN_SPEED = 10.f;
+static const float MIN_SPEED = 5.f;
 
 
 - (instancetype)init
@@ -61,7 +61,7 @@ static const float MIN_SPEED = 10.f;
         //Set the score to zero.
         penguinsCount = 3;
         //Create and add the score label as a child.
-        scoreLabel = [CCLabelTTF labelWithString:@"Penguins Left: 3" fontName:@"Marker Felt" fontSize:24];
+        scoreLabel = [CCLabelTTF labelWithString:@"Birds Left: 3" fontName:@"Marker Felt" fontSize:24];
         scoreLabel.position = ccp(470, 300);
         CCColor* myColor = [CCColor colorWithRed: 0 green: 0 blue: 0];
         scoreLabel.color = myColor;
@@ -80,7 +80,7 @@ static const float MIN_SPEED = 10.f;
 {
     CCLOG(@"substract");
     penguinsCount = penguinsCount - 1; //I think: score++; will also work.
-    [scoreLabel setString:[NSString stringWithFormat:@"Penguins Left: %d", penguinsCount]];
+    [scoreLabel setString:[NSString stringWithFormat:@"Birds Left: %d", penguinsCount]];
 }
 
 // is called when CCB file has completed loading
@@ -328,7 +328,6 @@ static const float MIN_SPEED = 10.f;
 - (void)nextAttempt {
     
     if (sealCount <= 0) {
-//        [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"ChooseLevels"]];
         [[CCDirector sharedDirector] pause];
         CCScene *level = [CCBReader loadAsScene:@"youWin"];
         [_winNode addChild:level];
