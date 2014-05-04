@@ -1386,7 +1386,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>retry</string>
+							<string>Retry</string>
 							<false/>
 						</array>
 					</dict>
@@ -1611,7 +1611,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>80</real>
+							<real>90</real>
 							<real>10</real>
 							<integer>1</integer>
 							<integer>0</integer>
@@ -1694,7 +1694,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>back</string>
+							<string>Back</string>
 							<false/>
 						</array>
 					</dict>
